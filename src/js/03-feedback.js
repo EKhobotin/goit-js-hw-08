@@ -25,7 +25,7 @@ function onFormSubmit(event) {
     event.preventDefault();
     console.log(loadFromLs('userData'));
     localStorage.removeItem('userData');
-    refs.formEl.reset;
+    refs.formEl.reset();
 }
 // функція заповнення полів
 function dataToForm() {
