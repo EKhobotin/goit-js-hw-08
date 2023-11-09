@@ -10,7 +10,7 @@ refs.formEl.addEventListener('submit', onFormSubmit)
 
 //функція зберігання в localeStorage при інпуті
 function onFormInput(event) {
-    console.dir(event.currentTarget);
+    // console.dir(event.currentTarget);
     const userForm = {};
     const formData = new FormData(refs.formEl);    
     // console.log(formData);
