@@ -17,24 +17,22 @@ player.setCurrentTime(loadFromLs('videoplayer-current-time')).then(function(seco
     // seconds = the actual time that the player seeked to
 }).catch(function (error) {
     switch (error.name) {
-        case 'RangeError':
-            // the time was less than 0 or greater than the video’s duration
+        case 'RangeError':          
             break;
-
-        default:
-            // some other error occurred
+        default:           
             break;
     }
 });
-
+//записуємо в localStorage кожну секунду поточне значення з player.on
 function timePlay(value) {
     //console.log(value);
   saveToLs('videoplayer-current-time', value.seconds);
 }
+// зберігання в localStorage
 function saveToLs(key, value) { 
     localStorage.setItem(key, JSON.stringify(value));
   } 
-
+// завантаження з localStorage
 function loadFromLs(key) {
  const data = localStorage.getItem(key);
   try {
